@@ -1,7 +1,9 @@
 -- db employee_tracker
 -- DROP DATABASE employee *Delte entire datbase
--- source db/db.sql  *recreate DB and employee table 
--- source db/schema.sql *runs this doc in mysql 
+-- source db/db.sql;  *recreate DB and employee table 
+-- source db/schema.sql; *runs this doc in mysql 
+-- source db/seeds.sql; * seeds 
+
 
 DROP TABLE IF EXISTS employee;
 
