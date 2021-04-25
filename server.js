@@ -1,11 +1,15 @@
 const express = require('express');
-
+const mysql = require('mysql2');
+const routes = require('./routes')
+const db = require('./db/connections');
 const PORT =  3001;
 const app = express();
 
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+
 
 //test it wroks 
 app.get('/', (req,res) => {
