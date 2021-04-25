@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
 const routes = require('./routes/employeeRoutes')
 const db = require('./db/connections');
 const PORT =  3001;
@@ -8,7 +8,7 @@ const app = express();
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(routes)
 
 
 //test it wroks 
