@@ -1,6 +1,6 @@
 const express = require('express');
 // const mysql = require('mysql2');
-const routes = require('./routes/employeeRoutes')
+const routes = require('./routes')
 const db = require('./db/connections');
 const PORT =  3001;
 const app = express();
@@ -10,13 +10,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(routes)
 
-
-//test it wroks 
-app.get('/', (req,res) => {
-    res.json ({
-        message: 'sup yo'
-    });
-});
 
 //resonse if not found
 app.use((req, res) => {

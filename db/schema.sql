@@ -4,6 +4,10 @@
 -- source db/schema.sql; *runs this doc in mysql 
 -- source db/seeds.sql; * seeds 
 
+DROP DATABASE IF EXISTS employee_tracker;
+CREATE DATABASE employee_tracker;
+USE employee_tracker;
+
 
 DROP TABLE IF EXISTS employee;
 DROP TABLE IF EXISTS roles;
@@ -18,12 +22,13 @@ CREATE TABLE employee (
 id INTEGER AUTO_INCREMENT PRIMARY KEY, 
 first_name VARCHAR(30) NOT NULL,
 last_name VARCHAR(30) NOT NULL,
-role_id INTEGER,
-CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE SET NULL,
-manager_id INTEGER NOT NULL
+role_id INTEGER, 
+CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE SET NULL
 );
 
 
-SELECT employee.*, roles.title
-FROM employee
-LEFT JOIN roles ON employee.role_id = roles.id;
+
+
+-- SELECT employee.*, roles.title
+-- FROM employee
+-- LEFT JOIN roles ON employee.role_id = roles.id;
