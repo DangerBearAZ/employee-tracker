@@ -26,5 +26,8 @@ router.post('/api/role', ({body}, res) => {
       
 }) 
 
+// View a role 
+
+
 // exports stays a the bottom 
 module.exports = router;
