@@ -1,4 +1,4 @@
-# employee-tracket: Home Work 
+# employee-tracker: Home Work 
 ### content management systems (CMS) challenge this week is to build a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
 # User Story 
