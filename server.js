@@ -2,9 +2,15 @@ const express = require('express');
 // const mysql = require('mysql2');
 const routes = require('./routes')
 const db = require('./db/connections');
-const PORT =  3001;
-const app = express();
+const inquirer = require('inquirer');
+/// console tabel not in use 
+const cTable = require('console.table');
 
+
+const app = express();
+const PORT =  3001;
+
+const inquir
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
